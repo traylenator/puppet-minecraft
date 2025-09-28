@@ -8,6 +8,7 @@ class minecraft::user {
     ensure     => present,
     gid        => $minecraft::group,
     home       => $minecraft::install_dir,
+    shell      => '/usr/bin/bash',
     managehome => true,
     system     => true,
     require    => Group[$minecraft::group],
